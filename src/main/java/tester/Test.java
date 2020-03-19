@@ -1,7 +1,10 @@
 package tester;
 
 import backend.Users;
+import converter.UserJSONconverter;
+import dto.UserInformationDTO;
 import entities.UserInformation;
+import java.util.Collection;
 
 /**
  *
@@ -30,6 +33,16 @@ public class Test {
         //users.createUser(userinformation);
         //System.out.println("Following user created: " + users);
         
-        System.out.println("Retrieving all users: " + users.getAllUsers());
+        //System.out.println("Retrieving all users: " + users.getAllUsersFromDTO());
+        
+        //TESTING IF CONVERTER TO JSON WORKS, validated by: https://jsonlint.com/
+        UserJSONconverter conv = new UserJSONconverter();
+        String json = conv.getJSONFromUsers(users.getAllUsers());
+        //System.out.println("JSON format:\n" + json);
+        
+        //TESTING IF CONVERTER FROM JSON USING GSON WORKS
+        Collection<UserInformationDTO> ufDTO;// = new UserInformation();
+        ufDTO = conv.getUserInformationFromJSON(json);
+        System.out.println("GSON format:\n" + ufDTO);
     }
 }

@@ -29,6 +29,7 @@ public class Users {
         return manager;
     }
     
+    //Following commented code is commented because the call to the function manager() creates an error
     /*public UserInformation createUser(UserInformation user){
         manager();
         System.out.println("Before we try\n");
@@ -38,7 +39,7 @@ public class Users {
             manager().getTransaction().begin();
             manager().persist(user); //we persist (insert) our user
             System.out.println("Check if user has been persisted: " + user);
-            manager().getTransaction().commit();
+            manager().getTransaction().commit(); <-- WE NEVER DO THIS, CODE DIES HERE
             //we return the user
             return user;
         }
@@ -75,10 +76,15 @@ public class Users {
         List<UserInformation> getAllUsers = new ArrayList<>();
         getAllUsers = query.getResultList();
         return getAllUsers;
-        /*List<UserInformation> getUsers = new ArrayList<>();
-        Query query = factory.createEntityManager().createQuery("SELECT * FROM UserInformation");
-        getUsers = query.getResultList();
-        return getUsers;*/
     }
     
+    public List<UserInformation> getAllUsersFromDTO(){
+        EntityManager manager = factory.createEntityManager();
+        //create a query that retrieves from our dto
+        Query query = manager.createQuery("SELECT NEW dto.UserInformationDTO(u) FROM UserInformation AS u");
+        //create a list of our object userinformation
+        List<UserInformation> getAllUsers = new ArrayList<>();
+        getAllUsers = query.getResultList();
+        return getAllUsers;
+    }
 }

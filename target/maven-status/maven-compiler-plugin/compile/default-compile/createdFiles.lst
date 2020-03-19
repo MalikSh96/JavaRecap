@@ -1,4 +1,6 @@
+tester\Test.class
 backend\Users.class
+converter\UserJSONconverter.class
 entities\UserInformation.class
 entities\UserInformation_.class
-tester\Test.class
+dto\UserInformationDTO.class
