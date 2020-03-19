@@ -1,0 +1,2 @@
+# ignore persistence unit file
+persistence.xml
