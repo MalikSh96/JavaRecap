@@ -21,3 +21,4 @@ Make some jUnit test.\
 This is just a side project to refresh all that I know from before and to implement new knowledge.\
 With that said, if time allows it I could work to implement a frontend to this project too, as my current plan is 
 to just let this remain as a backend stuff, with a middle layer to handle data.\# JavaRecap
+# JavaRecap
