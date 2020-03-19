@@ -11,7 +11,7 @@ Refreshing my knowledge about how to generate a persistence unit, which dependen
 Dependencies and plugins such as gson, json, mysql, junit, hamcrest, mindrot, nimbuds, jersey etc..\
 Refreshing my knowledge about how to use the EntityManager.
 
-# WHAT HAVE I DONE SO FAR - TO BE UPDATED SOON-TM
+# WHAT HAVE I DONE SO FAR 
 Made a persistence unit.\
 Made an Entity class of type UserInformation.\
 Made a "backend" folder that contains a Users.java class to maintain work back and forth between the database.\
