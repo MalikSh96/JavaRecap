@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
  * @author malik
  */
 //specifying the path of the webservice
-@Path("User")
+@Path("users")
 public class UserResource {
     
     UserJSONconverter converter = new UserJSONconverter();
@@ -37,20 +37,6 @@ public class UserResource {
      */
     public UserResource() {
     }
-
-    /**
-     * Retrieves representation of an instance of backend.UserResource
-     * @return an instance of java.lang.String
-     */
-    @GET
-    @Path("allusers")
-    //below describes (Produces) what kind of resource we will get, here I chose json
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllUsersAsJson() {
-        //we need to return the response we want
-        return Response.ok().entity(gson.toJson(users.getAllUsersFromDTO())).build();
-    }
-
     /**
      * Retrieves representation of an instance of rest.PersonResource
      * @return an instance of java.lang.String
@@ -61,6 +47,20 @@ public class UserResource {
         //Tester
         return "{\"message\":\"Hello from Rest service\"}";
     }
+
+    /**
+     * Retrieves representation of an instance of backend.UserResource
+     * @return an instance of java.lang.String
+     */
+    /*@GET
+    @Path("allusers")
+    //below describes (Produces) what kind of resource we will get, here I chose json
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAllUsersAsJson() {
+        //we need to return the response we want
+        return Response.ok().entity(gson.toJson(users.getAllUsers())).build();
+    }*/
+
     
     
     //--------------------------------------------------------------------------
@@ -69,8 +69,8 @@ public class UserResource {
      * PUT method for updating or creating an instance of UserResource
      * @param content representation for the resource
      */
-    @PUT
+    /*@PUT
     @Consumes(MediaType.APPLICATION_JSON)
     public void putJson(String content) {
-    }
+    }*/
 }
