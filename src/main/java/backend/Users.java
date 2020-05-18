@@ -24,6 +24,12 @@ public class Users {
     public Users() {
     }
     
+    //we will use this for our REST Api
+    public Users(EntityManagerFactory factory) {
+        this.factory = factory;
+    }
+    
+    //This is not used
     private EntityManager manager(){
         EntityManager manager = factory.createEntityManager();
         return manager;

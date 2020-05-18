@@ -1,4 +1,7 @@
+converter\UserJSONconverter$1.class
+backend\ApplicationConfig.class
 tester\Test.class
+backend\UserResource.class
 backend\Users.class
 converter\UserJSONconverter.class
 entities\UserInformation.class

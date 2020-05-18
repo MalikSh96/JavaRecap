@@ -18,7 +18,9 @@ Made a "backend" folder that contains a Users.java class to maintain work back a
 So far I have implemented the necessary dependencies and plugins.\
 Made a dto folder that handles filtered data through the UserInformationDTO.java.\
 In the "tester" folder I have made a Test.java class which contains a "main" method, this is just to purely test if the code works.\
-Made a "converter" folder which should convert object to json and json to object.
+Made a "converter" folder which should convert object to json and json to object.\
+
+Tried to make a simple REST Api but as of now it does not work (get).
 
 # WHAT ARE MY NEXT STEPS you may need to know
 My next steps would to be implementing a bit more functionality to the already existing code.\
